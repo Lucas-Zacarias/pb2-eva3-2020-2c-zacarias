@@ -45,9 +45,9 @@ public class TestAutoPista {
 		TreeSet<Vehiculo> autosInfractoresOrdenados = autopista.obtenerVehiculosConExcesosDeVelocidadOrdenadosPorPatente();
 		
 		Vehiculo autoEsperadoPrimero = autosInfractoresOrdenados.first();
-		assertEquals(autoEsperadoPrimero, auto2);
+			assertEquals(autoEsperadoPrimero, auto3);
 		Vehiculo autoEsperadoUltimo = autosInfractoresOrdenados.last();
-		assertEquals(autoEsperadoUltimo, auto3);
+		assertEquals(autoEsperadoUltimo, auto1);
 	}
 @Test
 	public void queLaCantidadDeVehiculosEnCirculacionSeaLaEsperada() {
