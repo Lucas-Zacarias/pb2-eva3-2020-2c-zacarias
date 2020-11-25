@@ -66,15 +66,14 @@ public class TestAutoPista {
 		
 		assertEquals(cantidadEsperada, cantidadObtenida);
 	}
-	@Test(expected = VehiculoNotFounException.class)
-	public void queUnVehiculoHayaEntradoEnLaAutopistaLuegoDeRegistrarElTelepase() throws VehiculoNotFounException {
+	@Test
+	public void queUnVehiculoTengaInfraccionPorIrPorSobreLaVelocidadMaxima() {
 		Vehiculo auto1 = new Automovil("456abc", 150, 130);
-		Autopista autopista = new Autopista();
 		
-		autopista.registrarTelepase(1, auto1);
+		Boolean resultado = auto1.enInfraccion();
+				
+		assertTrue(resultado);		
 		
-		Boolean resultado = autopista.ingresarAutopista(1);
-		assertTrue(resultado);
 	}
 	
 }
